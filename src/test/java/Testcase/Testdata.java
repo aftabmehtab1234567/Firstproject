@@ -40,6 +40,14 @@ public class Testdata extends Base {
 		Thread.sleep(3000);
 		lp1.Finish();
 		Thread.sleep(3000);
+		lp1.backtoproduct();
+		Thread.sleep(3000);
+		lp1.filter();
+		Thread.sleep(6000);
+		 lp1.assertFilterSelected("lohi");
+		lp1.filter1();
+		lp1.assertFilterSelected1("hilo");
+		Thread.sleep(6000);
 	}
 
 }

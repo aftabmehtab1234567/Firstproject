@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-26T16:45:57 IST" name="Default suite" finished-at="2024-07-26T16:46:32 IST" duration-ms="35071">
+  <suite started-at="2024-07-27T19:28:16 IST" name="Default suite" finished-at="2024-07-27T19:29:09 IST" duration-ms="53615">
     <groups>
     </groups>
-    <test started-at="2024-07-26T16:45:57 IST" name="Default test" finished-at="2024-07-26T16:46:32 IST" duration-ms="35071">
+    <test started-at="2024-07-27T19:28:16 IST" name="Default test" finished-at="2024-07-27T19:29:09 IST" duration-ms="53615">
       <class name="Testcase.Testdata">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Testcase.Testdata@196a42c3]" started-at="2024-07-26T16:45:57 IST" name="setup" finished-at="2024-07-26T16:46:04 IST" duration-ms="6251" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Testcase.Testdata@16eb3ea3]" started-at="2024-07-27T19:28:16 IST" name="setup" finished-at="2024-07-27T19:28:23 IST" duration-ms="7527" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="data()[pri:0, instance:Testcase.Testdata@196a42c3]" started-at="2024-07-26T16:46:04 IST" name="data" finished-at="2024-07-26T16:46:32 IST" duration-ms="28464" status="PASS">
+        <test-method signature="data()[pri:0, instance:Testcase.Testdata@16eb3ea3]" started-at="2024-07-27T19:28:23 IST" name="data" finished-at="2024-07-27T19:29:09 IST" duration-ms="45595" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- data -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Testcase.Testdata@196a42c3]" started-at="2024-07-26T16:46:32 IST" name="tearDown" finished-at="2024-07-26T16:46:32 IST" duration-ms="285" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Testcase.Testdata@16eb3ea3]" started-at="2024-07-27T19:29:09 IST" name="tearDown" finished-at="2024-07-27T19:29:09 IST" duration-ms="399" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

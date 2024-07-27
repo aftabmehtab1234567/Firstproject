@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeClass;
 
 import Pageobject.Loginpage;
 import Utilities.Readconfig;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
 	Readconfig readconfig = new Readconfig();
@@ -23,7 +24,7 @@ public class Base {
 
 	@BeforeClass
 	public void setup() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", readconfig.chrome());
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 
 		driver.get(url);
