@@ -5,8 +5,8 @@
     <classes>
       <class name="Testcase.Testdata">
         <methods>
-          <include name="data"/>
           <include name="setup"/>
+          <include name="dropdown"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- Testcase.Testdata -->
