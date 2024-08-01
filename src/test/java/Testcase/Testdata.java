@@ -10,7 +10,7 @@ import Utilities.Readconfig;
 public class Testdata extends Base {
     Readconfig config = new Readconfig();
 
-    @Test
+    @Test(priority = 1)
     public void data() throws InterruptedException {
         Loginpage lp1 = new Loginpage(driver);
         lp1.clickproductlink();
@@ -19,14 +19,10 @@ public class Testdata extends Base {
         Thread.sleep(3000);
         WebElement remove = driver.findElement(By.id("remove"));
 
-        if (remove.isDisplayed()) {
-            Assert.assertTrue(true);
-        } else {
-            Assert.assertTrue(false);
-        }
+        Assert.assertTrue(remove.isDisplayed());
     }
 
-    @Test
+    @Test(priority = 2)
     public void payment() throws InterruptedException {
         Loginpage lp1 = new Loginpage(driver);
         lp1.clickAddcarticon();
@@ -47,15 +43,11 @@ public class Testdata extends Base {
         Thread.sleep(3000);
     }
 
-    @Test
+    @Test(priority = 3)
     public void dropdown() throws InterruptedException {
         Loginpage lp1 = new Loginpage(driver);
         Thread.sleep(3000);
-        lp1.filter();
-        Thread.sleep(6000);
-        lp1.assertFilterSelected("lohi");
-        lp1.filter1();
-        lp1.assertFilterSelected1("hilo");
-        Thread.sleep(6000);
+        lp1.filterAndAssertAllOptions();
+        Thread.sleep(3000);
     }
 }
