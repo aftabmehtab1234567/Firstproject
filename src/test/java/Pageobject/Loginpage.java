@@ -1,12 +1,21 @@
 package Pageobject;
 
 import static org.testng.Assert.assertEquals;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Loginpage {
@@ -113,7 +122,7 @@ public class Loginpage {
     public void backtoproduct() {
         backtoproduct.click();
     }
-
+    
     public void backhome() {
         back.click();
     }
@@ -131,5 +140,20 @@ public class Loginpage {
             drop.selectByValue(value);
             assertEquals(value, drop.getFirstSelectedOption().getAttribute("value"));
         }
+    }
+    public void capturescreenshot(String screenshotName) throws IOException {
+        // Generate timestamp for unique screenshot names
+        String timestamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+        
+        // Capture the screenshot
+        TakesScreenshot sc = ((TakesScreenshot) ldriver);
+        File src = sc.getScreenshotAs(OutputType.FILE);
+        
+        // Define the destination path relative to the user directory
+        String destinationPath = System.getProperty("user.dir") + "/Screenshots/" + screenshotName + "_" + timestamp + ".png";
+        File f2 = new File(destinationPath);
+        
+        // Copy the screenshot file to the destination
+        FileUtils.copyFile(src, f2);
     }
 }

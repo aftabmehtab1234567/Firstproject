@@ -3,6 +3,9 @@ package Testcase;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import Pageobject.Loginpage;
+
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -24,7 +27,7 @@ public class Testdata extends Base {
     }
 
     @Test(priority = 2)
-    public void payment() throws InterruptedException {
+    public void payment() throws InterruptedException, IOException {
         Loginpage lp1 = new Loginpage(driver);
         lp1.clickAddcarticon();
         Thread.sleep(3000);
@@ -39,6 +42,8 @@ public class Testdata extends Base {
         lp1.conting();
         Thread.sleep(3000);
         lp1.Finish();
+        Thread.sleep(5000);
+        lp1.capturescreenshot("payment_method");
         Thread.sleep(3000);
         lp1.backtoproduct();
         Thread.sleep(3000);

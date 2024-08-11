@@ -5,11 +5,9 @@
     <classes>
       <class name="Testcase.Testdata">
         <methods>
-          <include name="data"/>
           <include name="setup"/>
-          <include name="dropdown"/>
-          <include name="payment"/>
           <include name="tearDown"/>
+          <include name="payment"/>
         </methods>
       </class> <!-- Testcase.Testdata -->
     </classes>
