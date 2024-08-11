@@ -1,5 +1,6 @@
 package Testcase;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import Pageobject.Loginpage;
 import org.openqa.selenium.By;
@@ -7,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import Utilities.Readconfig;
 
+@Listeners(TestNGListener.class)
 public class Testdata extends Base {
     Readconfig config = new Readconfig();
 
@@ -18,7 +20,6 @@ public class Testdata extends Base {
         lp1.clickAddproduct();
         Thread.sleep(3000);
         WebElement remove = driver.findElement(By.id("remove"));
-
         Assert.assertTrue(remove.isDisplayed());
     }
 
